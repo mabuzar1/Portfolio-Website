@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Abuzar | Portfolio</title>
+    <link rel="stylesheet" href ="styles.css">
+
+</head>                                 
+<body>
+ 
+     <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Abuzar | Portfolio</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+     </header>
+<main>
+    <section id="home" class="section home">
+        <div class="home-content">
+            <h1>Hi, I'm Muhammad Abuzar</h1>
+            <p>Full Stack Intern | Second Year CE Student</p>
+            <a style =color:#ecfdf5 href="#projects" class="btn">View My Work </a>
+        </div>
+        <img src="assets/profile.jpeg" alt="Portrait of Muhammad Abuzar" class="profile-img">
+    </section>
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I'm a Computer Engineering student passionate about 
+        Backend Development, Python, FastAPI, and Generative AI.
+        I want to build clean APIs and AI powered prototypes. Currently interning at CapregSoft.
+    </p>
+</section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">C++ & OOP</div>
+             <div class="skill-card">SQL & MySQL</div>
+             <div class="skill-card">MIPS Assembly</div>
+              <div class="skill-card">VHDL / Verilog</div>
+              <div class="skill-card">PCB Designing</div>
+               <div class="skill-card">Proteus & Vivado</div>
+        </div>
+    </section>
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <article class="project-card">
+            <img src="assets/processor.jpg" alt="VHDL code and Vivado simulation of 32-Bit MIPS Processor">
+            <h3>32-Bit Single Cycle Processor</h3>
+            <p style=color:#ecfdf5>VHDL | Vivado | Feb 2026 - June 2026<br> Designed a 32-bit MIPS processor with ALU, 
+                datapath, control unit, and register file. Validated via testbenches with zero 
+                timing violations.</p>
+        </article>
+          <article class="project-card">
+            <img src="assets/traffic.jpg" alt="Graph visualization of road traffic analyzer">
+            <h3>Road Traffic Analyzer</h3>
+            <p style=color:#ecfdf5>C++ | Data Structures, Graphs | Sep 2025 - Dec 2025<br>Designed a 32-bit MIPS processor 
+                with ALU, datapath, control unit, and register file. Graph-based analyzer 
+                using Dijkstra's Algorithm. Optimized pathfinding 15% across multiple 
+                intersections and reduced compute time 20% with congestion detection.</p>
+        </article>
+      <article class="project-card">
+            <img src="assets/retail.jpg" alt="MySQL ER diagram for Smart Retail Database">
+            <h3>Smart Retail Database System</h3>
+            <p style=color:#ecfdf5>MySQL | Database Design | March 2026 - June 2026<br>Normalized 3NF database for 5+ entities.
+                 Implemented stored procedures for order workflows and real-time stock updates.
+            </p>
+        </article>
+    <article class="project-card">
+            <img src="assets/hospital.jpg" alt="C++ OOP Hospital Management System console UI">
+            <h3>Hospital Management System</h3>
+            <p style=color:#ecfdf5>C++ | OOP, File Handling | Nov 2024 - Jan 2025<br>Full system with patient registration,
+                 admission/discharge, ward allocation, billing. Used file handling for persistent storage.
+            </p>
+        </article>
+          <article class="project-card">
+            <img src="assets/dice.jpg" alt="Digital dice circuit designed in Proteus">
+            <h3>Digital Dice</h3>
+            <p style=color:#ecfdf5>Digital Logic Design | Proteus | Nov 2025 - Jan 2026<br>Simulated digital dice game 
+                using combinational + sequential logic. Led team task allocation and timeline.
+            </p>
+        </article>
+    </div>
+</section>
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name ="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name ="email" required>
+        <label for="message">Message</label>
+        <textarea type="message" id="message" name ="messsage" rows="4" required></textarea><br>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+<p class="contact-info">Email: ma5297974@gmail.com | Wah Cantt, Punjab, PK</p>
+</section>
+</main>
+<footer>
+<p style=color:#ecfdf5>© 2026 Muhammad Abuzar</p>
+</footer>
+</body>
+</html>
