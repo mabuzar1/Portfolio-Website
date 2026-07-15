@@ -1,126 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Abuzar | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>                                 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Abuzar</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
 <body>
- 
-     <header>
-        <nav class="navbar">
-            <div class="logo">Abuzar | Portfolio</div>
-            <div class="hamburger" aria-label="Toggle navigation">☰</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-     </header>
+<nav class="trace-rail" aria-hidden="true">
+  <svg viewBox="0 0 40 600" preserveAspectRatio="none">
+    <line x1="20" y1="0" x2="20" y2="600" class="rail-line"/>
+    <line x1="20" y1="0" x2="20" y2="600" class="rail-pulse"/>
+  </svg>
+  <ul class="rail-vias">
+    <li data-target="home" data-wire="pink"><span class="via"></span><span class="via-label">HOME</span></li>
+    <li data-target="about" data-wire="blue"><span class="via"></span><span class="via-label">ABOUT</span></li>
+    <li data-target="education" data-wire="amber"><span class="via"></span><span class="via-label">EDU</span></li>
+    <li data-target="skills" data-wire="green"><span class="via"></span><span class="via-label">SKILLS</span></li>
+    <li data-target="projects" data-wire="purple"><span class="via"></span><span class="via-label">PROJECTS</span></li>
+    <li data-target="contact" data-wire="pink"><span class="via"></span><span class="via-label">CONTACT</span></li>
+  </ul>
+</nav>
+
+<header>
+  <nav class="navbar">
+    <div class="logo"><span class="logo-tag">𝓐</span> Abuzar<span class="logo-dim">.dev</span></div>
+    <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">☰</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main>
-    <section id="home" class="section home">
-        <div class="home-content">
-            <h1>Hi, I'm Muhammad Abuzar</h1>
-            <p>Full Stack Intern | Second Year CE Student</p>
-            <a style="color:#0a1a12" href="#projects" class="btn">View My Work</a>
+
+  <section id="home" class="section home">
+    <div class="home-content">
+      <p class="eyebrow reveal">// BS Computer Engineering — Air University, Islamabad</p>
+      <h1 class="reveal">Hi, I'm Muhammad Abuzar</h1>
+      <p class="typewriter reveal"><span id="typewriter-text"></span><span class="type-cursor" aria-hidden="true">|</span></p>
+      <p class="home-sub reveal">Building at the boundary of silicon and software — from MIPS datapaths to
+      FastAPI backends and generative AI prototypes.</p>
+      <div class="home-actions reveal">
+        <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
+        <a href="#contact" class="btn btn-ghost magnetic">Get In Touch</a>
+      </div>
+      <div class="home-stats reveal">
+        <div class="stat"><span class="stat-value"><span class="counter" data-target="4">0</span><small>/8</small></span><span class="stat-label">Semester</span></div>
+        <div class="stat"><span class="stat-value"><span class="counter" data-target="5">0</span></span><span class="stat-label">Projects Shipped</span></div>
+        <div class="stat"><span class="stat-value">CE</span><span class="stat-label">Air University</span></div>
+      </div>
+    </div>
+    <div class="chip-frame reveal">
+      <img src="assets/profile.jpeg" alt="Portrait of Muhammad Abuzar" class="profile-img">
+    </div>
+  </section>
+
+  <div class="divider" data-net="pink" aria-hidden="true"></div>
+
+  <section id="about" class="section">
+    <p class="eyebrow reveal">// About</p>
+    <h2 class="reveal">Where hardware meets code</h2>
+    <p class="lead reveal">I'm a Computer Engineering undergraduate at <strong>Air University, Islamabad</strong>, currently in my
+    <strong>4th semester</strong>, interning as a Full Stack Intern at <strong>CapregSoft</strong>. My coursework runs from
+    logic design and computer architecture to data structures and databases — and outside class I'm drawn to backend
+    development, Python, FastAPI, and generative AI, building clean APIs and AI-powered prototypes.</p>
+    <p class="reveal">I like systems I can trace end to end: from a gate on a breadboard, up through a datapath, into a database schema,
+    and out through an API response. That full-stack curiosity — silicon to server — is what ties my projects together.</p>
+  </section>
+
+  <div class="divider" data-net="blue" aria-hidden="true"></div>
+
+  <section id="education" class="section">
+    <p class="eyebrow reveal">// Education</p>
+    <h2 class="reveal">Academic Timeline</h2>
+    <div class="edu-card reveal">
+      <div class="edu-head">
+        <h3>BS Computer Engineering</h3>
+        <span class="edu-badge">In Progress</span>
+      </div>
+      <p class="edu-meta">Air University, Islamabad &nbsp;·&nbsp; Expected 2028</p>
+      <p>Coursework has covered digital logic design, computer architecture (MIPS), object-oriented programming,
+      data structures &amp; algorithms, and database systems — with electives and personal projects layered in Python,
+      FastAPI, and applied AI.</p>
+      <div class="semester-trace" role="img" aria-label="Semester progress: 4 of 8 completed">
+        <div class="semester-line"></div>
+        <div class="semester-pads">
+          <span class="pad filled"></span>
+          <span class="pad filled"></span>
+          <span class="pad filled"></span>
+          <span class="pad filled current"><b>4</b></span>
+          <span class="pad"></span>
+          <span class="pad"></span>
+          <span class="pad"></span>
+          <span class="pad"></span>
         </div>
-        <img src="assets/profile.jpeg" alt="Portrait of Muhammad Abuzar" class="profile-img">
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I'm a Computer Engineering student passionate about 
-        Backend Development, Python, FastAPI, and Generative AI.
-        I want to build clean APIs and AI powered prototypes. Currently interning at CapregSoft.</p>
-    </section>
+  <div class="divider" data-net="amber" aria-hidden="true"></div>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">C++ & OOP</div>
-            <div class="skill-card">SQL & MySQL</div>
-            <div class="skill-card">MIPS Assembly</div>
-            <div class="skill-card">VHDL / Verilog</div>
-            <div class="skill-card">PCB Designing</div>
-            <div class="skill-card">Proteus & Vivado</div>
-        </div>
-    </section>
+  <section id="skills" class="section">
+    <p class="eyebrow reveal">// Skills</p>
+    <h2 class="reveal">Toolchain</h2>
+    <p class="lead reveal">Grouped by the layer each tool operates at — silicon, systems, and software. Hover a card.</p>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <article class="project-card">
-                <img src="assets/processor.jpg" alt="VHDL code and Vivado simulation of 32-Bit MIPS Processor">
-                <h3>32-Bit Single Cycle Processor</h3>
-                <p style="color:#ecfdf5">VHDL | Vivado | Feb 2026 - June 2026<br> Designed a 32-bit MIPS processor with ALU, 
-                datapath, control unit, and register file. Validated via testbenches with zero 
-                timing violations.</p>
-            </article>
-            <article class="project-card">
-                <img src="assets/traffic.jpg" alt="Graph visualization of road traffic analyzer">
-                <h3>Road Traffic Analyzer</h3>
-                <p style="color:#ecfdf5">C++ | Data Structures, Graphs | Sep 2025 - Dec 2025<br>Graph-based analyzer 
-                using Dijkstra's Algorithm. Optimized pathfinding 15% across multiple 
-                intersections and reduced compute time 20% with congestion detection.</p>
-            </article>
-            <article class="project-card">
-                <img src="assets/retail.jpg" alt="MySQL ER diagram for Smart Retail Database">
-                <h3>Smart Retail Database System</h3>
-                <p style="color:#ecfdf5">MySQL | Database Design | March 2026 - June 2026<br>Normalized 3NF database for 5+ entities.
-                Implemented stored procedures for order workflows and real-time stock updates.</p>
-            </article>
-            <article class="project-card">
-                <img src="assets/hospital.jpg" alt="C++ OOP Hospital Management System console UI">
-                <h3>Hospital Management System</h3>
-                <p style="color:#ecfdf5">C++ | OOP, File Handling | Nov 2024 - Jan 2025<br>Full system with patient registration,
-                admission/discharge, ward allocation, billing. Used file handling for persistent storage.</p>
-            </article>
-            <article class="project-card">
-                <img src="assets/dice.jpg" alt="Digital dice circuit designed in Proteus">
-                <h3>Digital Dice</h3>
-                <p style="color:#ecfdf5">Digital Logic Design | Proteus | Nov 2025 - Jan 2026<br>Simulated digital dice game 
-                using combinational + sequential logic. Led team task allocation and timeline.</p>
-            </article>
-        </div>
-    </section>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>VHDL / Verilog</div>
+      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>MIPS Assembly</div>
+      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>Proteus &amp; Vivado</div>
+      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>PCB Designing</div>
+      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>C++ &amp; OOP</div>
+      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>Python &amp; FastAPI</div>
+      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>Generative AI Prototyping</div>
+      <div class="skill-card reveal" data-cat="data"><span class="cat-dot"></span>SQL &amp; MySQL</div>
+    </div>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <p class="contact-info">Email: ma5297974@gmail.com | Wah Cantt, Punjab, PK</p>
-    </section>
+    <div class="legend reveal">
+      <span><i class="dot hardware"></i>Hardware / Digital Logic</span>
+      <span><i class="dot software"></i>Software / Backend</span>
+      <span><i class="dot data"></i>Data &amp; Databases</span>
+    </div>
+  </section>
+
+  <div class="divider" data-net="green" aria-hidden="true"></div>
+
+  <section id="projects" class="section">
+    <p class="eyebrow reveal">// Projects</p>
+    <h2 class="reveal">Selected Work</h2>
+    <p class="lead reveal">Move your cursor across a card to tilt it.</p>
+
+    <div class="projects-grid">
+      <article class="project-card tilt reveal" data-cat="hardware">
+        <span class="led"></span>
+        <img src="assets/processor.jpg" alt="VHDL code and Vivado simulation of 32-Bit MIPS Processor">
+        <h3>32-Bit Single Cycle Processor</h3>
+        <p class="stack">VHDL · Vivado · Feb 2026 – Jun 2026</p>
+        <p>Designed a 32-bit MIPS processor with ALU, datapath, control unit, and register file. Validated via
+        testbenches with zero timing violations.</p>
+      </article>
+
+      <article class="project-card tilt reveal" data-cat="software">
+        <span class="led"></span>
+        <img src="assets/traffic.jpg" alt="Graph visualization of road traffic analyzer">
+        <h3>Road Traffic Analyzer</h3>
+        <p class="stack">C++ · Data Structures &amp; Graphs · Sep 2025 – Dec 2025</p>
+        <p>Graph-based analyzer using Dijkstra's Algorithm. Optimized pathfinding 15% across multiple intersections
+        and reduced compute time 20% with congestion detection.</p>
+      </article>
+
+      <article class="project-card tilt reveal" data-cat="data">
+        <span class="led"></span>
+        <img src="assets/retail.jpg" alt="MySQL ER diagram for Smart Retail Database">
+        <h3>Smart Retail Database System</h3>
+        <p class="stack">MySQL · Database Design · Mar 2026 – Jun 2026</p>
+        <p>Normalized 3NF database for 5+ entities. Implemented stored procedures for order workflows and
+        real-time stock updates.</p>
+      </article>
+
+      <article class="project-card tilt reveal" data-cat="software">
+        <span class="led"></span>
+        <img src="assets/hospital.jpg" alt="C++ OOP Hospital Management System console UI">
+        <h3>Hospital Management System</h3>
+        <p class="stack">C++ · OOP &amp; File Handling · Nov 2024 – Jan 2025</p>
+        <p>Full system with patient registration, admission/discharge, ward allocation, and billing. Used file
+        handling for persistent storage.</p>
+      </article>
+
+      <article class="project-card tilt reveal" data-cat="hardware">
+        <span class="led"></span>
+        <img src="assets/dice.jpg" alt="Digital dice circuit designed in Proteus">
+        <h3>Digital Dice</h3>
+        <p class="stack">Digital Logic Design · Proteus · Nov 2025 – Jan 2026</p>
+        <p>Simulated a digital dice game using combinational and sequential logic. Led team task allocation and
+        timeline.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider" data-net="purple" aria-hidden="true"></div>
+
+  <section id="contact" class="section">
+    <p class="eyebrow reveal">// Contact</p>
+    <h2 class="reveal">Let's Connect</h2>
+    <p class="lead reveal">Open to internships, collaborations, and interesting problems — hardware, backend, or in between.</p>
+
+    <form class="contact-form reveal" id="contact-form">
+      <div class="pin">
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="pin">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="pin">
+        <label for="message">MESSAGE</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="contact-info reveal">
+      <span>ma5297974@gmail.com</span>
+      <span aria-hidden="true">·</span>
+      <span>Wah Cantt, Punjab, PK</span>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-    <p style="color:#ecfdf5">© 2026 Muhammad Abuzar</p>
+  <p>© 2026 Muhammad Abuzar — BS Computer Engineering, Air University, Islamabad</p>
 </footer>
 
 <script>
+/* ---------- Hamburger nav ---------- */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+hamburger.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navLinks.classList.toggle('active'); }
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('active'));
 });
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+/* ---------- Trace rail: active via per section ---------- */
+const railItems = document.querySelectorAll('.rail-vias li');
+const sections = [...railItems].map(li => document.getElementById(li.dataset.target)).filter(Boolean);
+
+if ('IntersectionObserver' in window && sections.length) {
+  const railObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const li = document.querySelector(`.rail-vias li[data-target="${entry.target.id}"]`);
+      if (!li) return;
+      if (entry.isIntersecting) {
+        railItems.forEach(i => i.classList.remove('active'));
+        li.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  sections.forEach(s => railObserver.observe(s));
+}
+railItems.forEach(li => {
+  li.addEventListener('click', () => document.getElementById(li.dataset.target)?.scrollIntoView({ behavior: 'smooth' }));
+});
+
+/* ---------- Scroll reveal ---------- */
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in-view'));
+}
+
+/* ---------- Typewriter roles ---------- */
+const roles = ['Full-Stack Intern @ CapregSoft', 'Hardware Engineer in training', 'AI Prototype Builder'];
+const twEl = document.getElementById('typewriter-text');
+if (twEl) {
+  if (prefersReducedMotion) {
+    twEl.textContent = roles[0];
+  } else {
+    let roleIndex = 0, charIndex = 0, deleting = false;
+    const tick = () => {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        twEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) { deleting = true; setTimeout(tick, 1400); return; }
+      } else {
+        charIndex--;
+        twEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
+      }
+      setTimeout(tick, deleting ? 35 : 65);
+    };
+    tick();
+  }
+}
+
+/* ---------- Animated counters ---------- */
+const counters = document.querySelectorAll('.counter');
+if ('IntersectionObserver' in window && counters.length) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10) || 0;
+      counterObserver.unobserve(el);
+      if (prefersReducedMotion) { el.textContent = target; return; }
+      const duration = 900;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => counterObserver.observe(c));
+}
+
+/* ---------- Tilt on project cards ---------- */
+if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.tilt').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(700px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+}
+
+/* ---------- Magnetic buttons ---------- */
+if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${(x * 0.25).toFixed(1)}px, ${(y * 0.35).toFixed(1)}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
+
+/* ---------- Contact form (client-side only) ---------- */
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+form?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  status.textContent = `Thanks! I'll get back to you soon at the email you provided.`;
+  status.classList.add('show');
+  form.reset();
 });
 </script>
 </body>
