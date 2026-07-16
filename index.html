@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Abuzar</title>
+<title>Muhammad Abuzar | Computer Engineering Portfolio</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,12 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+<!-- Signature element: a "live wire" rail — a bright, multicolor line running
+     down the page with a pulse of current animating along it, and a via per
+     section that lights up in that section's own wire color when in view. -->
 <nav class="trace-rail" aria-hidden="true">
   <svg viewBox="0 0 40 600" preserveAspectRatio="none">
     <line x1="20" y1="0" x2="20" y2="600" class="rail-line"/>
@@ -44,6 +50,8 @@
 <main>
 
   <section id="home" class="section home">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="home-content">
       <p class="eyebrow reveal">// BS Computer Engineering — Air University, Islamabad</p>
       <h1 class="reveal">Hi, I'm Muhammad Abuzar</h1>
@@ -60,7 +68,7 @@
         <div class="stat"><span class="stat-value">CE</span><span class="stat-label">Air University</span></div>
       </div>
     </div>
-    <div class="chip-frame reveal">
+    <div class="chip-frame tilt-3d reveal">
       <img src="assets/profile.jpeg" alt="Portrait of Muhammad Abuzar" class="profile-img">
     </div>
   </section>
@@ -138,52 +146,117 @@
   <section id="projects" class="section">
     <p class="eyebrow reveal">// Projects</p>
     <h2 class="reveal">Selected Work</h2>
-    <p class="lead reveal">Move your cursor across a card to tilt it.</p>
+    <p class="lead reveal">Move your cursor across a card to tilt it in 3D, or click one to flip it over.</p>
 
     <div class="projects-grid">
-      <article class="project-card tilt reveal" data-cat="hardware">
-        <span class="led"></span>
-        <img src="assets/processor.jpg" alt="VHDL code and Vivado simulation of 32-Bit MIPS Processor">
-        <h3>32-Bit Single Cycle Processor</h3>
-        <p class="stack">VHDL · Vivado · Feb 2026 – Jun 2026</p>
-        <p>Designed a 32-bit MIPS processor with ALU, datapath, control unit, and register file. Validated via
-        testbenches with zero timing violations.</p>
+      <article class="project-card tilt reveal flip-card" data-cat="hardware" tabindex="0" role="button" aria-pressed="false">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="led"></span>
+            <img src="assets/processor.jpg" alt="VHDL code and Vivado simulation of 32-Bit MIPS Processor">
+            <h3>32-Bit Single Cycle Processor</h3>
+            <p class="stack">VHDL · Vivado · Feb 2026 – Jun 2026</p>
+            <p>Designed a 32-bit MIPS processor with ALU, datapath, control unit, and register file.</p>
+            <span class="flip-hint">Flip for details ↻</span>
+          </div>
+          <div class="flip-back">
+            <h3>Key Results</h3>
+            <ul>
+              <li>Zero timing violations across all testbenches</li>
+              <li>Full ALU, control unit &amp; register file datapath</li>
+              <li>Simulated end-to-end in Vivado</li>
+            </ul>
+            <div class="tags"><span>VHDL</span><span>Vivado</span><span>Digital Logic</span></div>
+          </div>
+        </div>
       </article>
 
-      <article class="project-card tilt reveal" data-cat="software">
-        <span class="led"></span>
-        <img src="assets/traffic.jpg" alt="Graph visualization of road traffic analyzer">
-        <h3>Road Traffic Analyzer</h3>
-        <p class="stack">C++ · Data Structures &amp; Graphs · Sep 2025 – Dec 2025</p>
-        <p>Graph-based analyzer using Dijkstra's Algorithm. Optimized pathfinding 15% across multiple intersections
-        and reduced compute time 20% with congestion detection.</p>
+      <article class="project-card tilt reveal flip-card" data-cat="software" tabindex="0" role="button" aria-pressed="false">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="led"></span>
+            <img src="assets/traffic.jpg" alt="Graph visualization of road traffic analyzer">
+            <h3>Road Traffic Analyzer</h3>
+            <p class="stack">C++ · Data Structures &amp; Graphs · Sep 2025 – Dec 2025</p>
+            <p>Graph-based analyzer using Dijkstra's Algorithm for congestion-aware routing.</p>
+            <span class="flip-hint">Flip for details ↻</span>
+          </div>
+          <div class="flip-back">
+            <h3>Key Results</h3>
+            <ul>
+              <li>15% faster pathfinding across intersections</li>
+              <li>20% reduced compute time via congestion detection</li>
+              <li>Graph model built from scratch in C++</li>
+            </ul>
+            <div class="tags"><span>C++</span><span>Graphs</span><span>Dijkstra</span></div>
+          </div>
+        </div>
       </article>
 
-      <article class="project-card tilt reveal" data-cat="data">
-        <span class="led"></span>
-        <img src="assets/retail.jpg" alt="MySQL ER diagram for Smart Retail Database">
-        <h3>Smart Retail Database System</h3>
-        <p class="stack">MySQL · Database Design · Mar 2026 – Jun 2026</p>
-        <p>Normalized 3NF database for 5+ entities. Implemented stored procedures for order workflows and
-        real-time stock updates.</p>
+      <article class="project-card tilt reveal flip-card" data-cat="data" tabindex="0" role="button" aria-pressed="false">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="led"></span>
+            <img src="assets/retail.jpg" alt="MySQL ER diagram for Smart Retail Database">
+            <h3>Smart Retail Database System</h3>
+            <p class="stack">MySQL · Database Design · Mar 2026 – Jun 2026</p>
+            <p>Normalized 3NF database for 5+ entities with real-time stock updates.</p>
+            <span class="flip-hint">Flip for details ↻</span>
+          </div>
+          <div class="flip-back">
+            <h3>Key Results</h3>
+            <ul>
+              <li>3NF-normalized schema across 5+ entities</li>
+              <li>Stored procedures for order workflows</li>
+              <li>Real-time stock updates on transactions</li>
+            </ul>
+            <div class="tags"><span>MySQL</span><span>3NF</span><span>Stored Procs</span></div>
+          </div>
+        </div>
       </article>
 
-      <article class="project-card tilt reveal" data-cat="software">
-        <span class="led"></span>
-        <img src="assets/hospital.jpg" alt="C++ OOP Hospital Management System console UI">
-        <h3>Hospital Management System</h3>
-        <p class="stack">C++ · OOP &amp; File Handling · Nov 2024 – Jan 2025</p>
-        <p>Full system with patient registration, admission/discharge, ward allocation, and billing. Used file
-        handling for persistent storage.</p>
+      <article class="project-card tilt reveal flip-card" data-cat="software" tabindex="0" role="button" aria-pressed="false">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="led"></span>
+            <img src="assets/hospital.jpg" alt="C++ OOP Hospital Management System console UI">
+            <h3>Hospital Management System</h3>
+            <p class="stack">C++ · OOP &amp; File Handling · Nov 2024 – Jan 2025</p>
+            <p>Full system with patient registration, admission/discharge, and billing.</p>
+            <span class="flip-hint">Flip for details ↻</span>
+          </div>
+          <div class="flip-back">
+            <h3>Key Results</h3>
+            <ul>
+              <li>Patient registration &amp; ward allocation flows</li>
+              <li>Admission, discharge &amp; billing modules</li>
+              <li>Persistent storage via file handling</li>
+            </ul>
+            <div class="tags"><span>C++</span><span>OOP</span><span>File I/O</span></div>
+          </div>
+        </div>
       </article>
 
-      <article class="project-card tilt reveal" data-cat="hardware">
-        <span class="led"></span>
-        <img src="assets/dice.jpg" alt="Digital dice circuit designed in Proteus">
-        <h3>Digital Dice</h3>
-        <p class="stack">Digital Logic Design · Proteus · Nov 2025 – Jan 2026</p>
-        <p>Simulated a digital dice game using combinational and sequential logic. Led team task allocation and
-        timeline.</p>
+      <article class="project-card tilt reveal flip-card" data-cat="hardware" tabindex="0" role="button" aria-pressed="false">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="led"></span>
+            <img src="assets/dice.jpg" alt="Digital dice circuit designed in Proteus">
+            <h3>Digital Dice</h3>
+            <p class="stack">Digital Logic Design · Proteus · Nov 2025 – Jan 2026</p>
+            <p>Simulated a digital dice game using combinational and sequential logic.</p>
+            <span class="flip-hint">Flip for details ↻</span>
+          </div>
+          <div class="flip-back">
+            <h3>Key Results</h3>
+            <ul>
+              <li>Combinational + sequential logic design</li>
+              <li>Fully simulated &amp; verified in Proteus</li>
+              <li>Led team task allocation and timeline</li>
+            </ul>
+            <div class="tags"><span>Proteus</span><span>Digital Logic</span><span>Team Lead</span></div>
+          </div>
+        </div>
       </article>
     </div>
   </section>
@@ -225,6 +298,7 @@
   <p>© 2026 Muhammad Abuzar — BS Computer Engineering, Air University, Islamabad</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ---------- Hamburger nav ---------- */
 const hamburger = document.querySelector('.hamburger');
@@ -349,6 +423,187 @@ if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 }
+
+/* ---------- Flip cards (click/tap or keyboard) ---------- */
+document.querySelectorAll('.flip-card').forEach(card => {
+  const toggle = () => {
+    const flipped = card.classList.toggle('flipped');
+    card.setAttribute('aria-pressed', flipped ? 'true' : 'false');
+  };
+  card.addEventListener('click', toggle);
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+  });
+});
+
+/* ---------- 3D tilt on the profile chip-frame ---------- */
+if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.tilt-3d').forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.transform = `perspective(600px) rotateX(${(-y * 12).toFixed(2)}deg) rotateY(${(x * 12).toFixed(2)}deg)`;
+    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+  });
+}
+
+/* ---------- Cursor spotlight ---------- */
+(function initCursorGlow() {
+  const glow = document.getElementById('cursor-glow');
+  if (!glow || window.matchMedia('(pointer: coarse)').matches) return;
+  let raf = null;
+  window.addEventListener('mousemove', (e) => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      glow.style.setProperty('--mx', e.clientX + 'px');
+      glow.style.setProperty('--my', e.clientY + 'px');
+      glow.classList.add('active');
+      raf = null;
+    });
+  });
+})();
+
+/* ---------- Hero 3D centerpiece: glowing core + orbiting skill nodes ---------- */
+(function initHero3D() {
+  const canvas = document.getElementById('hero-canvas');
+  const homeSection = document.getElementById('home');
+  if (!canvas || !homeSection || typeof THREE === 'undefined' || prefersReducedMotion) return;
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  } catch (err) {
+    return; // WebGL unavailable — hero still works without the 3D layer
+  }
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  camera.position.set(0, 0, 12);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+  const lightViolet = new THREE.PointLight(0x8b5cf6, 3.2, 30);
+  lightViolet.position.set(4, 3, 6);
+  scene.add(lightViolet);
+  const lightMagenta = new THREE.PointLight(0xec4899, 2.4, 30);
+  lightMagenta.position.set(-4, -2, 5);
+  scene.add(lightMagenta);
+  const lightCyan = new THREE.PointLight(0x22d3ee, 2.0, 30);
+  lightCyan.position.set(0, -4, 4);
+  scene.add(lightCyan);
+
+  const core = new THREE.Group();
+  core.position.set(2.4, 0, 0);
+
+  // glassy metallic core
+  const coreMesh = new THREE.Mesh(
+    new THREE.IcosahedronGeometry(2.1, 1),
+    new THREE.MeshPhysicalMaterial({
+      color: 0x2a1f4d, metalness: 0.75, roughness: 0.25,
+      clearcoat: 0.6, clearcoatRoughness: 0.3,
+      emissive: 0x4c1d95, emissiveIntensity: 0.35
+    })
+  );
+  core.add(coreMesh);
+
+  // glowing wireframe overlay — the "circuit" edge
+  const edges = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(2.14, 1));
+  const wire = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x22d3ee, transparent: true, opacity: 0.55 }));
+  core.add(wire);
+
+  scene.add(core);
+
+  // orbiting skill nodes, colored per category
+  const nodeColors = [0xfbbf24, 0x22d3ee, 0x8b5cf6, 0xfbbf24, 0x22d3ee, 0x8b5cf6, 0x34d399];
+  const orbits = [];
+  nodeColors.forEach((color, i) => {
+    const node = new THREE.Mesh(
+      new THREE.SphereGeometry(0.16, 16, 16),
+      new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.9, roughness: 0.4 })
+    );
+    const radius = 3.1 + (i % 3) * 0.55;
+    const speed = 0.25 + (i % 4) * 0.08;
+    const tilt = (i / nodeColors.length) * Math.PI;
+    const phase = Math.random() * Math.PI * 2;
+    scene.add(node);
+    orbits.push({ node, radius, speed, tilt, phase });
+
+    // faint orbit ring
+    const ringGeo = new THREE.TorusGeometry(radius, 0.006, 8, 96);
+    const ring = new THREE.Mesh(ringGeo, new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.15 }));
+    ring.rotation.x = tilt;
+    ring.position.copy(core.position);
+    scene.add(ring);
+  });
+
+  // drifting dust particles for depth
+  const dustCount = 90;
+  const dustPositions = new Float32Array(dustCount * 3);
+  for (let i = 0; i < dustCount; i++) {
+    dustPositions[i * 3] = (Math.random() - 0.5) * 16;
+    dustPositions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+    dustPositions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  }
+  const dustGeo = new THREE.BufferGeometry();
+  dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPositions, 3));
+  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xc4b5fd, size: 0.035, transparent: true, opacity: 0.5 }));
+  scene.add(dust);
+
+  let mouseX = 0, mouseY = 0;
+  homeSection.addEventListener('mousemove', (e) => {
+    const rect = homeSection.getBoundingClientRect();
+    mouseX = ((e.clientX - rect.left) / rect.width) - 0.5;
+    mouseY = ((e.clientY - rect.top) / rect.height) - 0.5;
+  });
+
+  function resize() {
+    const rect = homeSection.getBoundingClientRect();
+    const w = rect.width, h = rect.height;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const clock = new THREE.Clock();
+  let raf;
+  function animate() {
+    const t = clock.getElapsedTime();
+
+    core.rotation.y += 0.0032;
+    core.rotation.x += (mouseY * 0.35 - core.rotation.x) * 0.03;
+    core.rotation.z += (mouseX * -0.18 - core.rotation.z) * 0.03;
+    wire.rotation.copy(core.rotation);
+
+    orbits.forEach(o => {
+      const angle = t * o.speed + o.phase;
+      const x = Math.cos(angle) * o.radius;
+      const z = Math.sin(angle) * o.radius;
+      const y = Math.sin(angle * 1.3) * o.radius * 0.25;
+      o.node.position.set(
+        core.position.x + x,
+        core.position.y + y * Math.cos(o.tilt) - z * Math.sin(o.tilt) * 0.3,
+        core.position.z + z
+      );
+    });
+
+    dust.rotation.y += 0.0006;
+
+    camera.position.x += (mouseX * 1.2 - camera.position.x) * 0.02;
+    camera.lookAt(core.position);
+
+    renderer.render(scene, camera);
+    raf = requestAnimationFrame(animate);
+  }
+  animate();
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { cancelAnimationFrame(raf); } else { animate(); }
+  });
+})();
 
 /* ---------- Contact form (client-side only) ---------- */
 const form = document.getElementById('contact-form');
