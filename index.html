@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Abuzar | Computer Engineering Portfolio</title>
+<title>Muhammad Abuzar</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,9 +14,6 @@
 
 <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-<!-- Signature element: a "live wire" rail — a bright, multicolor line running
-     down the page with a pulse of current animating along it, and a via per
-     section that lights up in that section's own wire color when in view. -->
 <nav class="trace-rail" aria-hidden="true">
   <svg viewBox="0 0 40 600" preserveAspectRatio="none">
     <line x1="20" y1="0" x2="20" y2="600" class="rail-line"/>
@@ -34,7 +31,7 @@
 
 <header>
   <nav class="navbar">
-    <div class="logo"><span class="logo-tag">𝓐</span> Abuzar<span class="logo-dim">.dev</span></div>
+    <div class="logo"><span class="logo-tag">𝓐</span> Abuzar<span class="logo-dim">.CE</span></div>
     <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">☰</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -75,78 +72,172 @@
 
   <div class="divider" data-net="pink" aria-hidden="true"></div>
 
-  <section id="about" class="section">
-    <p class="eyebrow reveal">// About</p>
-    <h2 class="reveal">Where hardware meets code</h2>
-    <p class="lead reveal">I'm a Computer Engineering undergraduate at <strong>Air University, Islamabad</strong>, currently in my
-    <strong>4th semester</strong>, interning as a Full Stack Intern at <strong>CapregSoft</strong>. My coursework runs from
-    logic design and computer architecture to data structures and databases — and outside class I'm drawn to backend
-    development, Python, FastAPI, and generative AI, building clean APIs and AI-powered prototypes.</p>
-    <p class="reveal">I like systems I can trace end to end: from a gate on a breadboard, up through a datapath, into a database schema,
-    and out through an API response. That full-stack curiosity — silicon to server — is what ties my projects together.</p>
+  <section id="about" class="section about-section">
+    <canvas id="about-canvas" class="section-bg-canvas" aria-hidden="true"></canvas>
+    <div class="section-bg-scrim" aria-hidden="true"></div>
+    <div class="about-text">
+      <p class="eyebrow reveal">// About</p>
+      <h2 class="reveal">Where hardware meets code</h2>
+      <div class="glass-card tilt reveal">
+        <p>I'm a Computer Engineering undergraduate at <strong>Air University, Islamabad</strong>, currently in my
+        <strong>4th semester</strong>, interning as a Full Stack Intern at <strong>CapregSoft</strong>. My coursework runs from
+        logic design and computer architecture to data structures and databases — and outside class I'm drawn to backend
+        development, Python, FastAPI, and generative AI, building clean APIs and AI-powered prototypes.</p>
+      </div>
+      <div class="glass-card tilt reveal">
+        <p>I like systems I can trace end to end: from a gate on a breadboard, up through a datapath, into a database schema,
+        and out through an API response. That full-stack curiosity — silicon to server — is what ties my projects together.</p>
+      </div>
+    </div>
   </section>
 
   <div class="divider" data-net="blue" aria-hidden="true"></div>
 
-  <section id="education" class="section">
+  <section id="education" class="section education-section">
+    <canvas id="education-canvas" class="section-bg-canvas" aria-hidden="true"></canvas>
+    <div class="section-bg-scrim" aria-hidden="true"></div>
     <p class="eyebrow reveal">// Education</p>
     <h2 class="reveal">Academic Timeline</h2>
-    <div class="edu-card reveal">
-      <div class="edu-head">
-        <h3>BS Computer Engineering</h3>
-        <span class="edu-badge">In Progress</span>
-      </div>
-      <p class="edu-meta">Air University, Islamabad &nbsp;·&nbsp; Expected 2028</p>
-      <p>Coursework has covered digital logic design, computer architecture (MIPS), object-oriented programming,
-      data structures &amp; algorithms, and database systems — with electives and personal projects layered in Python,
-      FastAPI, and applied AI.</p>
-      <div class="semester-trace" role="img" aria-label="Semester progress: 4 of 8 completed">
-        <div class="semester-line"></div>
-        <div class="semester-pads">
-          <span class="pad filled"></span>
-          <span class="pad filled"></span>
-          <span class="pad filled"></span>
-          <span class="pad filled current"><b>4</b></span>
-          <span class="pad"></span>
-          <span class="pad"></span>
-          <span class="pad"></span>
-          <span class="pad"></span>
+
+    <div class="edu-layout">
+      <div class="edu-timeline" id="edu-timeline">
+        <div class="edu-timeline-line"><div class="edu-timeline-fill" id="edu-timeline-fill"></div></div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">Institution</span>
+            <h3>Air University, Islamabad</h3>
+            <p>BS Computer Engineering — a research-focused university with strong labs in electronics, embedded systems, and computing.</p>
+          </div>
+        </div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">Degree</span>
+            <h3>BS Computer Engineering</h3>
+            <p>A curriculum spanning digital logic, computer architecture, embedded systems, data structures, and databases.</p>
+          </div>
+        </div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">Current Standing</span>
+            <h3>Semester 4 of 8</h3>
+            <div class="semester-trace" role="img" aria-label="Semester progress: 4 of 8 completed">
+              <div class="semester-line"></div>
+              <div class="semester-pads">
+                <span class="pad filled"></span>
+                <span class="pad filled"></span>
+                <span class="pad filled"></span>
+                <span class="pad filled current"><b>4</b></span>
+                <span class="pad"></span>
+                <span class="pad"></span>
+                <span class="pad"></span>
+                <span class="pad"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">Relevant Coursework</span>
+            <h3>Core &amp; Electives</h3>
+            <div class="tags">
+              <span>Digital Logic Design</span><span>Computer Architecture</span><span>OOP</span>
+              <span>Data Structures &amp; Algorithms</span><span>Database Systems</span><span>Signals &amp; Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">Expected Graduation</span>
+            <h3>2028</h3>
+            <p>On track to graduate with a BS in Computer Engineering from Air University, Islamabad.</p>
+          </div>
+        </div>
+
+        <div class="edu-milestone reveal">
+          <span class="edu-node"></span>
+          <div class="glass-card edu-card-2 tilt">
+            <span class="edu-tag">CGPA</span>
+            <h3>Available on request</h3>
+            <p>Transcript and detailed grade history shared directly — reach out via the contact section.</p>
+          </div>
         </div>
       </div>
-    </div>
+
+     
   </section>
 
   <div class="divider" data-net="amber" aria-hidden="true"></div>
 
-  <section id="skills" class="section">
-    <p class="eyebrow reveal">// Skills</p>
-    <h2 class="reveal">Toolchain</h2>
-    <p class="lead reveal">Grouped by the layer each tool operates at — silicon, systems, and software. Hover a card.</p>
-
-    <div class="skills-grid">
-      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>VHDL / Verilog</div>
-      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>MIPS Assembly</div>
-      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>Proteus &amp; Vivado</div>
-      <div class="skill-card reveal" data-cat="hardware"><span class="cat-dot"></span>PCB Designing</div>
-      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>C++ &amp; OOP</div>
-      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>Python &amp; FastAPI</div>
-      <div class="skill-card reveal" data-cat="software"><span class="cat-dot"></span>Generative AI Prototyping</div>
-      <div class="skill-card reveal" data-cat="data"><span class="cat-dot"></span>SQL &amp; MySQL</div>
+  <section id="skills" class="section skills-section">
+    <canvas id="skills-sphere-canvas" class="section-bg-canvas" aria-hidden="true"></canvas>
+    <div class="section-bg-scrim" aria-hidden="true"></div>
+    <div class="skill-tooltip" id="skill-tooltip" aria-hidden="true">
+      <strong id="skill-tooltip-name"></strong>
+      <span id="skill-tooltip-level"></span>
+      <div class="skill-tooltip-bar"><div id="skill-tooltip-fill"></div></div>
     </div>
 
+    <p class="eyebrow reveal">// Skills</p>
+    <h2 class="reveal">Engineering Network</h2>
+    <p class="lead reveal">Every skill I use, mapped as one connected network. Hover a node in the sphere for proficiency details.</p>
+
     <div class="legend reveal">
-      <span><i class="dot hardware"></i>Hardware / Digital Logic</span>
-      <span><i class="dot software"></i>Software / Backend</span>
-      <span><i class="dot data"></i>Data &amp; Databases</span>
+      <span><i class="dot hardware"></i>Engineering</span>
+      <span><i class="dot software"></i>Programming / Web</span>
+      <span><i class="dot data"></i>Database</span>
+      <span><i class="dot tools"></i>Tools</span>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-cat="hardware" data-level="70"><span class="cat-dot"></span>VHDL / Verilog</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="72"><span class="cat-dot"></span>MIPS Assembly</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="65"><span class="cat-dot"></span>Proteus &amp; Vivado</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="68"><span class="cat-dot"></span>PCB Designing</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="60"><span class="cat-dot"></span>Arduino</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="50"><span class="cat-dot"></span>ESP32</div>
+      <div class="skill-card reveal" data-cat="hardware" data-level="55"><span class="cat-dot"></span>MATLAB &amp; Simulink</div>
+      <div class="skill-card reveal" data-cat="software" data-level="85"><span class="cat-dot"></span>C++ &amp; OOP</div>
+      <div class="skill-card reveal" data-cat="software" data-level="80"><span class="cat-dot"></span>Python</div>
+      <div class="skill-card reveal" data-cat="software" data-level="78"><span class="cat-dot"></span>FastAPI</div>
+      <div class="skill-card reveal" data-cat="software" data-level="60"><span class="cat-dot"></span>JavaScript</div>
+      <div class="skill-card reveal" data-cat="software" data-level="58"><span class="cat-dot"></span>HTML &amp; CSS</div>
+      <div class="skill-card reveal" data-cat="software" data-level="50"><span class="cat-dot"></span>React</div>
+      <div class="skill-card reveal" data-cat="software" data-level="52"><span class="cat-dot"></span>Node.js</div>
+      <div class="skill-card reveal" data-cat="software" data-level="65"><span class="cat-dot"></span>Generative AI Prototyping</div>
+      <div class="skill-card reveal" data-cat="data" data-level="72"><span class="cat-dot"></span>SQL &amp; MySQL</div>
+      <div class="skill-card reveal" data-cat="tools" data-level="75"><span class="cat-dot"></span>Git &amp; GitHub</div>
+      <div class="skill-card reveal" data-cat="tools" data-level="80"><span class="cat-dot"></span>VS Code</div>
     </div>
   </section>
 
   <div class="divider" data-net="green" aria-hidden="true"></div>
 
-  <section id="projects" class="section">
-    <p class="eyebrow reveal">// Projects</p>
-    <h2 class="reveal">Selected Work</h2>
-    <p class="lead reveal">Move your cursor across a card to tilt it in 3D, or click one to flip it over.</p>
+  <section id="projects" class="section projects-section">
+    <canvas id="projects-canvas" class="section-bg-canvas" aria-hidden="true"></canvas>
+    <div class="section-bg-scrim" aria-hidden="true"></div>
+    <div class="projects-bg" aria-hidden="true">
+      <div class="hex-grid"></div>
+      <span class="float-shape shape-a"></span>
+      <span class="float-shape shape-b"></span>
+      <span class="float-shape shape-c"></span>
+    </div>
+    <div class="projects-head">
+      <div>
+        <p class="eyebrow reveal">// Projects</p>
+        <h2 class="reveal">Selected Work</h2>
+        <p class="lead reveal">Move your cursor across a card to tilt it in 3D, or click one to flip it over.</p>
+      </div>
+    </div>
 
     <div class="projects-grid">
       <article class="project-card tilt reveal flip-card" data-cat="hardware" tabindex="0" role="button" aria-pressed="false">
@@ -167,6 +258,10 @@
               <li>Simulated end-to-end in Vivado</li>
             </ul>
             <div class="tags"><span>VHDL</span><span>Vivado</span><span>Digital Logic</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -189,6 +284,10 @@
               <li>Graph model built from scratch in C++</li>
             </ul>
             <div class="tags"><span>C++</span><span>Graphs</span><span>Dijkstra</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -211,6 +310,10 @@
               <li>Real-time stock updates on transactions</li>
             </ul>
             <div class="tags"><span>MySQL</span><span>3NF</span><span>Stored Procs</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -233,6 +336,10 @@
               <li>Persistent storage via file handling</li>
             </ul>
             <div class="tags"><span>C++</span><span>OOP</span><span>File I/O</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -255,6 +362,10 @@
               <li>Led team task allocation and timeline</li>
             </ul>
             <div class="tags"><span>Proteus</span><span>Digital Logic</span><span>Team Lead</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              <a href="#" class="proj-link" onclick="event.stopPropagation()">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -603,6 +714,427 @@ if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) { cancelAnimationFrame(raf); } else { animate(); }
   });
+})();
+
+/* ---------- Shared factory for the small section 3D accents ---------- */
+function mountMiniScene(canvasId, populate) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas || typeof THREE === 'undefined' || prefersReducedMotion) return;
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  } catch (err) {
+    return;
+  }
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 50);
+  camera.position.set(0, 0, 6.5);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+  const p1 = new THREE.PointLight(0x8b5cf6, 2.4, 20); p1.position.set(3, 2, 4); scene.add(p1);
+  const p2 = new THREE.PointLight(0x22d3ee, 1.8, 20); p2.position.set(-3, -2, 3); scene.add(p2);
+
+  const update = populate(scene, THREE);
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    renderer.setSize(rect.width, rect.height, false);
+    camera.aspect = rect.width / rect.height;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const clock = new THREE.Clock();
+  let raf = null;
+  let visible = false;
+
+  function loop() {
+    update && update(clock.getElapsedTime());
+    renderer.render(scene, camera);
+    raf = requestAnimationFrame(loop);
+  }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        visible = entry.isIntersecting;
+        if (visible && !raf) loop();
+        if (!visible && raf) { cancelAnimationFrame(raf); raf = null; }
+      });
+    }, { threshold: 0.1 }).observe(canvas.closest('.section'));
+  } else {
+    loop();
+  }
+}
+
+
+mountMiniScene('about-canvas', (scene, THREE) => {
+  const group = new THREE.Group();
+
+  // motherboard: a flat glowing PCB slab with etched trace lines
+  const board = new THREE.Mesh(
+    new THREE.BoxGeometry(2.6, 0.12, 2.6),
+    new THREE.MeshPhysicalMaterial({ color: 0x14213d, metalness: 0.5, roughness: 0.4, emissive: 0x1e2a52, emissiveIntensity: 0.4 })
+  );
+  group.add(board);
+
+  const traceMat = new THREE.LineBasicMaterial({ color: 0x22d3ee, transparent: true, opacity: 0.6 });
+  for (let i = 0; i < 7; i++) {
+    const z = -1.1 + i * 0.36;
+    const pts = [
+      new THREE.Vector3(-1.2, 0.07, z),
+      new THREE.Vector3(-0.3 + (i % 2) * 0.4, 0.07, z),
+      new THREE.Vector3(1.2, 0.07, z - 0.2)
+    ];
+    group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), traceMat));
+  }
+
+  // orbiting components: CPU, RAM stick, microcontroller, logic-gate block
+  const parts = [];
+  const cpu = new THREE.Mesh(new THREE.BoxGeometry(0.55, 0.12, 0.55), new THREE.MeshStandardMaterial({ color: 0x8b5cf6, emissive: 0x8b5cf6, emissiveIntensity: 0.6 }));
+  const ram = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.1, 0.18), new THREE.MeshStandardMaterial({ color: 0x22d3ee, emissive: 0x22d3ee, emissiveIntensity: 0.55 }));
+  const mcu = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.1, 0.4), new THREE.MeshStandardMaterial({ color: 0xfbbf24, emissive: 0xfbbf24, emissiveIntensity: 0.55 }));
+  const gate = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.28, 0.1, 3), new THREE.MeshStandardMaterial({ color: 0xec4899, emissive: 0xec4899, emissiveIntensity: 0.55 }));
+  [cpu, ram, mcu, gate].forEach((p, i) => { parts.push({ mesh: p, radius: 1.7 + i * 0.25, speed: 0.22 + i * 0.05, height: 0.9 + i * 0.15, phase: i * 1.6 }); group.add(p); });
+
+  // drifting binary / pulse particles above the board
+  const dustCount = 60;
+  const positions = new Float32Array(dustCount * 3);
+  for (let i = 0; i < dustCount; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 4;
+    positions[i * 3 + 1] = Math.random() * 1.6 + 0.2;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 4;
+  }
+  const dustGeo = new THREE.BufferGeometry();
+  dustGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0x67e8f9, size: 0.045, transparent: true, opacity: 0.6 }));
+  group.add(dust);
+
+  scene.add(group);
+  group.rotation.x = 0.55;
+
+  let px = 0, py = 0;
+  const wrap = document.getElementById('about');
+  const canvasEl = document.getElementById('about-canvas');
+  if (wrap && !prefersReducedMotion) {
+    wrap.addEventListener('mousemove', (e) => {
+      const rect = canvasEl.getBoundingClientRect();
+      px = ((e.clientX - rect.left) / rect.width) - 0.5;
+      py = ((e.clientY - rect.top) / rect.height) - 0.5;
+    });
+    wrap.addEventListener('mouseleave', () => { px = 0; py = 0; });
+  }
+
+  return (t) => {
+    group.rotation.y += 0.0028;
+    group.rotation.x += ((0.55 + py * 0.25) - group.rotation.x) * 0.04;
+    group.rotation.z += (px * -0.15 - group.rotation.z) * 0.04;
+    parts.forEach(p => {
+      const a = t * p.speed + p.phase;
+      p.mesh.position.set(Math.cos(a) * p.radius * 0.6, p.height, Math.sin(a) * p.radius * 0.6);
+      p.mesh.rotation.y = t * 0.6;
+    });
+    dust.rotation.y += 0.0009;
+  };
+});
+
+/* Education — a ring of 8 nodes, 4 lit (completed semesters), 4 dim (ahead) */
+mountMiniScene('education-canvas', (scene, THREE) => {
+  const group = new THREE.Group();
+  const total = 8, completed = 4, radius = 1.8;
+  for (let i = 0; i < total; i++) {
+    const angle = (i / total) * Math.PI * 2;
+    const lit = i < completed;
+    const node = new THREE.Mesh(
+      new THREE.SphereGeometry(lit ? 0.19 : 0.14, 16, 16),
+      new THREE.MeshStandardMaterial({
+        color: lit ? 0xfbbf24 : 0x3a3550,
+        emissive: lit ? 0xfbbf24 : 0x000000,
+        emissiveIntensity: lit ? 0.9 : 0,
+        transparent: !lit, opacity: lit ? 1 : 0.5
+      })
+    );
+    node.position.set(Math.cos(angle) * radius, Math.sin(angle) * radius, 0);
+    group.add(node);
+  }
+  const ring = new THREE.Mesh(
+    new THREE.TorusGeometry(radius, 0.02, 8, 96),
+    new THREE.MeshBasicMaterial({ color: 0xfbbf24, transparent: true, opacity: 0.3 })
+  );
+  group.add(ring);
+
+  // small floating component chips (FPGA / Arduino-style boards) orbiting wider
+  const chips = [];
+  [0x22d3ee, 0x8b5cf6].forEach((color, i) => {
+    const chip = new THREE.Mesh(
+      new THREE.BoxGeometry(0.3, 0.08, 0.22),
+      new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.6 })
+    );
+    scene.add(chip);
+    chips.push({ mesh: chip, radius: radius + 0.7, speed: 0.18 + i * 0.1, phase: i * Math.PI });
+  });
+
+  scene.add(group);
+  return (t) => {
+    group.rotation.z = t * 0.3; group.rotation.x = 0.5 + Math.sin(t * 0.2) * 0.15;
+    chips.forEach(c => {
+      const a = t * c.speed + c.phase;
+      c.mesh.position.set(Math.cos(a) * c.radius, Math.sin(a) * c.radius * 0.4, Math.sin(a * 0.7) * 0.6);
+      c.mesh.rotation.y = t * 0.5;
+    });
+  };
+});
+(function initSkillsSphere() {
+  const canvas = document.getElementById('skills-sphere-canvas');
+  const wrap = document.getElementById('skills');
+  const tooltip = document.getElementById('skill-tooltip');
+  const tName = document.getElementById('skill-tooltip-name');
+  const tLevel = document.getElementById('skill-tooltip-level');
+  const tFill = document.getElementById('skill-tooltip-fill');
+  if (!canvas || !wrap || typeof THREE === 'undefined' || prefersReducedMotion) return;
+
+  const skillData = [
+    { name: 'VHDL / Verilog', cat: 'hardware', level: 70 },
+    { name: 'MIPS Assembly', cat: 'hardware', level: 72 },
+    { name: 'Proteus & Vivado', cat: 'hardware', level: 65 },
+    { name: 'PCB Designing', cat: 'hardware', level: 68 },
+    { name: 'Arduino', cat: 'hardware', level: 60 },
+    { name: 'ESP32', cat: 'hardware', level: 50 },
+    { name: 'MATLAB & Simulink', cat: 'hardware', level: 55 },
+    { name: 'C++ & OOP', cat: 'software', level: 85 },
+    { name: 'Python', cat: 'software', level: 80 },
+    { name: 'FastAPI', cat: 'software', level: 78 },
+    { name: 'JavaScript', cat: 'software', level: 60 },
+    { name: 'HTML & CSS', cat: 'software', level: 58 },
+    { name: 'React', cat: 'software', level: 50 },
+    { name: 'Node.js', cat: 'software', level: 52 },
+    { name: 'Generative AI', cat: 'software', level: 65 },
+    { name: 'SQL & MySQL', cat: 'data', level: 72 },
+    { name: 'Git & GitHub', cat: 'tools', level: 75 },
+    { name: 'VS Code', cat: 'tools', level: 80 }
+  ];
+  const catColor = { hardware: 0xfbbf24, software: 0x22d3ee, data: 0x8b5cf6, tools: 0x34d399 };
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  } catch (err) { return; }
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 50);
+  camera.position.set(0, 0, 8);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+  const pl1 = new THREE.PointLight(0x8b5cf6, 2.2, 20); pl1.position.set(4, 3, 5); scene.add(pl1);
+  const pl2 = new THREE.PointLight(0x22d3ee, 1.6, 20); pl2.position.set(-4, -3, 4); scene.add(pl2);
+
+  const group = new THREE.Group();
+  const sphereRadius = 3.1;
+  const nodeMeshes = [];
+  const golden = Math.PI * (3 - Math.sqrt(5));
+
+  skillData.forEach((skill, i) => {
+    const y = 1 - (i / (skillData.length - 1)) * 2;
+    const r = Math.sqrt(1 - y * y);
+    const theta = golden * i;
+    const pos = new THREE.Vector3(Math.cos(theta) * r * sphereRadius, y * sphereRadius, Math.sin(theta) * r * sphereRadius);
+    const color = catColor[skill.cat];
+    const mesh = new THREE.Mesh(
+      new THREE.SphereGeometry(0.13, 16, 16),
+      new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.85, roughness: 0.4 })
+    );
+    mesh.position.copy(pos);
+    mesh.userData = skill;
+    group.add(mesh);
+    nodeMeshes.push(mesh);
+  });
+
+  // connect each node to its two nearest neighbors
+  const edgeMat = new THREE.LineBasicMaterial({ color: 0x8b93c9, transparent: true, opacity: 0.25 });
+  const edges = [];
+  nodeMeshes.forEach((mesh, i) => {
+    const dists = nodeMeshes.map((m2, j) => ({ j, d: i === j ? Infinity : mesh.position.distanceTo(m2.position) }));
+    dists.sort((a, b) => a.d - b.d);
+    dists.slice(0, 2).forEach(({ j }) => {
+      const key = [i, j].sort().join('-');
+      if (edges.find(e => e.key === key)) return;
+      const geo = new THREE.BufferGeometry().setFromPoints([mesh.position, nodeMeshes[j].position]);
+      group.add(new THREE.Line(geo, edgeMat));
+      edges.push({ key, a: mesh, b: nodeMeshes[j], t: Math.random() });
+    });
+  });
+
+  // small traveling light particles along each connection
+  const particleGeo = new THREE.SphereGeometry(0.045, 8, 8);
+  const particleMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 });
+  edges.forEach(edge => {
+    edge.particle = new THREE.Mesh(particleGeo, particleMat);
+    group.add(edge.particle);
+  });
+
+  const outerGlow = new THREE.Mesh(
+    new THREE.SphereGeometry(sphereRadius * 0.985, 24, 24),
+    new THREE.MeshBasicMaterial({ color: 0x8b5cf6, wireframe: true, transparent: true, opacity: 0.06 })
+  );
+  group.add(outerGlow);
+
+  scene.add(group);
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    renderer.setSize(rect.width, rect.height, false);
+    camera.aspect = rect.width / rect.height;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2(-10, -10);
+  let hovered = null;
+
+  wrap.addEventListener('mousemove', (e) => {
+    const canvasRect = canvas.getBoundingClientRect();
+    mouse.x = ((e.clientX - canvasRect.left) / canvasRect.width) * 2 - 1;
+    mouse.y = -((e.clientY - canvasRect.top) / canvasRect.height) * 2 + 1;
+
+    const sectionRect = wrap.getBoundingClientRect();
+    tooltip.style.left = (e.clientX - sectionRect.left + 16) + 'px';
+    tooltip.style.top = (e.clientY - sectionRect.top + 8) + 'px';
+  });
+  wrap.addEventListener('mouseleave', () => {
+    mouse.set(-10, -10);
+    tooltip.classList.remove('show');
+    if (hovered) { hovered.scale.setScalar(1); hovered = null; }
+  });
+
+  const clock = new THREE.Clock();
+  let raf = null;
+
+  function loop() {
+    const t = clock.getElapsedTime();
+    group.rotation.y = t * 0.08;
+
+    edges.forEach(edge => {
+      edge.t = (edge.t + 0.0035) % 1;
+      edge.particle.position.lerpVectors(edge.a.position, edge.b.position, edge.t);
+    });
+
+    raycaster.setFromCamera(mouse, camera);
+    const hits = raycaster.intersectObjects(nodeMeshes);
+    if (hits.length) {
+      const hit = hits[0].object;
+      if (hovered !== hit) {
+        if (hovered) hovered.scale.setScalar(1);
+        hovered = hit;
+        hovered.scale.setScalar(1.6);
+        tName.textContent = hit.userData.name;
+        tLevel.textContent = `${hit.userData.cat} · self-assessed level`;
+        tFill.style.width = hit.userData.level + '%';
+        tooltip.classList.add('show');
+      }
+    } else if (hovered) {
+      hovered.scale.setScalar(1);
+      hovered = null;
+      tooltip.classList.remove('show');
+    }
+
+    renderer.render(scene, camera);
+    raf = requestAnimationFrame(loop);
+  }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !raf) loop();
+        if (!entry.isIntersecting && raf) { cancelAnimationFrame(raf); raf = null; }
+      });
+    }, { threshold: 0.1 }).observe(wrap);
+  } else {
+    loop();
+  }
+})();
+
+/* Projects — a small rotating chip cycling through the category colors */
+mountMiniScene('projects-canvas', (scene, THREE) => {
+  const colors = [0xfbbf24, 0x22d3ee, 0x8b5cf6];
+  const body = new THREE.Mesh(
+    new THREE.BoxGeometry(1.3, 0.35, 1.3),
+    new THREE.MeshPhysicalMaterial({ color: 0x2a2540, metalness: 0.6, roughness: 0.35 })
+  );
+  const wire = new THREE.LineSegments(
+    new THREE.EdgesGeometry(new THREE.BoxGeometry(1.34, 0.4, 1.34)),
+    new THREE.LineBasicMaterial({ color: colors[0] })
+  );
+  scene.add(body, wire);
+  return (t) => {
+    body.rotation.set(t * 0.3, t * 0.5, 0);
+    wire.rotation.copy(body.rotation);
+    const idx = Math.floor(t * 0.3) % colors.length;
+    wire.material.color.setHex(colors[idx]);
+  };
+});
+
+/* ---------- Oscilloscope waveform (plain canvas 2D — no WebGL needed) ---------- */
+(function initScope() {
+  const canvas = document.getElementById('scope-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width, h = canvas.height;
+
+  function draw(t) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(139,92,246,0.15)';
+    ctx.lineWidth = 1;
+    for (let gx = 0; gx < w; gx += 20) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke(); }
+    for (let gy = 0; gy < h; gy += 18) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(w, gy); ctx.stroke(); }
+
+    ctx.beginPath();
+    ctx.strokeStyle = '#22d3ee';
+    ctx.lineWidth = 2;
+    for (let x = 0; x < w; x++) {
+      const y = h / 2 + Math.sin(x * 0.09 + t) * (h * 0.28) * Math.sin(t * 0.4 + x * 0.01);
+      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  if (prefersReducedMotion) { draw(0); return; }
+  let raf;
+  function frame(ts) { draw(ts * 0.002); raf = requestAnimationFrame(frame); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !raf) raf = requestAnimationFrame(frame);
+        if (!entry.isIntersecting && raf) { cancelAnimationFrame(raf); raf = null; }
+      });
+    }, { threshold: 0.1 }).observe(canvas);
+  } else {
+    raf = requestAnimationFrame(frame);
+  }
+})();
+
+/* ---------- Education timeline: glows brighter as you scroll through it ---------- */
+(function initTimelineGlow() {
+  const timeline = document.getElementById('edu-timeline');
+  const fill = document.getElementById('edu-timeline-fill');
+  if (!timeline || !fill) return;
+  function update() {
+    const rect = timeline.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = rect.height;
+    const visible = Math.min(vh * 0.75, Math.max(0, vh * 0.75 - rect.top));
+    const pct = Math.max(0, Math.min(1, visible / total));
+    fill.style.height = (pct * 100) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 })();
 
 /* ---------- Contact form (client-side only) ---------- */
